@@ -113,7 +113,9 @@ fn impl_struct(input: Struct) -> TokenStream {
     };
     let display_impl = display_body.map(|body| {
         quote! {
+            #[allow(unused_qualifications)]
             impl #impl_generics std::fmt::Display for #ty #ty_generics #where_clause {
+                #[allow(clippy::used_underscore_binding)]
                 fn fmt(&self, __formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
                     #body
                 }
@@ -126,6 +128,7 @@ fn impl_struct(input: Struct) -> TokenStream {
         let from = from_field.ty;
         let body = from_initializer(from_field, backtrace_field);
         quote! {
+            #[allow(unused_qualifications)]
             impl #impl_generics std::convert::From<#from> for #ty #ty_generics #where_clause {
                 #[allow(deprecated)]
                 fn from(source: #from) -> Self {
@@ -138,6 +141,7 @@ fn impl_struct(input: Struct) -> TokenStream {
     let error_trait = spanned_error_trait(input.original);
 
     quote! {
+        #[allow(unused_qualifications)]
         impl #impl_generics #error_trait for #ty #ty_generics #where_clause {
             #source_method
             #backtrace_method
@@ -293,10 +297,11 @@ fn impl_enum(input: Enum) -> TokenStream {
             }
         });
         Some(quote! {
+            #[allow(unused_qualifications)]
             impl #impl_generics std::fmt::Display for #ty #ty_generics #where_clause {
                 fn fmt(&self, __formatter: &mut std::fmt::Formatter) -> std::fmt::Result {
                     #use_as_display
-                    #[allow(unused_variables, deprecated)]
+                    #[allow(unused_variables, deprecated, clippy::used_underscore_binding)]
                     match #void_deref self {
                         #(#arms,)*
                     }
@@ -314,6 +319,7 @@ fn impl_enum(input: Enum) -> TokenStream {
         let from = from_field.ty;
         let body = from_initializer(from_field, backtrace_field);
         Some(quote! {
+            #[allow(unused_qualifications)]
             impl #impl_generics std::convert::From<#from> for #ty #ty_generics #where_clause {
                 #[allow(deprecated)]
                 fn from(source: #from) -> Self {
@@ -326,6 +332,7 @@ fn impl_enum(input: Enum) -> TokenStream {
     let error_trait = spanned_error_trait(input.original);
 
     quote! {
+        #[allow(unused_qualifications)]
         impl #impl_generics #error_trait for #ty #ty_generics #where_clause {
             #source_method
             #backtrace_method
