@@ -1,4 +1,4 @@
-name: thiserror-impl
+name: "thiserror-impl"
 description: "Implementation detail of the `thiserror` crate"
 third_party {
   url {
@@ -6,14 +6,14 @@ third_party {
     value: "https://crates.io/crates/thiserror-impl"
   }
   url {
-    type: GIT
-    value: "https://github.com/dtolnay/thiserror"
+    type: ARCHIVE
+    value: "https://static.crates.io/crates/thiserror-impl/thiserror-impl-1.0.20.crate"
   }
-  version: "1.0.16"
+  version: "1.0.20"
   license_type: NOTICE
   last_upgrade_date {
     year: 2020
-    month: 5
-    day: 6
+    month: 8
+    day: 27
   }
 }
