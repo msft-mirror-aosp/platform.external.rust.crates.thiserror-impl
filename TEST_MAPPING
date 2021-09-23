@@ -2,6 +2,9 @@
 {
   "presubmit": [
     {
+      "name": "ZipFuseTest"
+    },
+    {
       "name": "anyhow_device_test_src_lib"
     },
     {
@@ -38,6 +41,57 @@
       "name": "anyhow_device_test_tests_test_source"
     },
     {
+      "name": "authfs_device_test_src_lib"
+    },
+    {
+      "name": "jni_device_test_src_lib"
+    },
+    {
+      "name": "jni_device_test_tests_executor"
+    },
+    {
+      "name": "jni_device_test_tests_executor_nested_attach"
+    },
+    {
+      "name": "jni_device_test_tests_java_integers"
+    },
+    {
+      "name": "jni_device_test_tests_jmap"
+    },
+    {
+      "name": "jni_device_test_tests_jni_api"
+    },
+    {
+      "name": "jni_device_test_tests_jni_global_refs"
+    },
+    {
+      "name": "jni_device_test_tests_threads_attach_guard"
+    },
+    {
+      "name": "jni_device_test_tests_threads_detach"
+    },
+    {
+      "name": "jni_device_test_tests_threads_detach_daemon"
+    },
+    {
+      "name": "jni_device_test_tests_threads_explicit_detach"
+    },
+    {
+      "name": "jni_device_test_tests_threads_explicit_detach_daemon"
+    },
+    {
+      "name": "jni_device_test_tests_threads_explicit_detach_permanent"
+    },
+    {
+      "name": "jni_device_test_tests_threads_nested_attach_daemon"
+    },
+    {
+      "name": "jni_device_test_tests_threads_nested_attach_guard"
+    },
+    {
+      "name": "jni_device_test_tests_threads_nested_attach_permanently"
+    },
+    {
       "name": "keystore2_crypto_test_rust"
     },
     {
@@ -51,6 +105,24 @@
     },
     {
       "name": "legacykeystore_test"
+    },
+    {
+      "name": "libapkverify.integration_test"
+    },
+    {
+      "name": "libapkverify.test"
+    },
+    {
+      "name": "microdroid_manager_test"
+    },
+    {
+      "name": "serde-xml-rs_device_test_src_lib"
+    },
+    {
+      "name": "serde-xml-rs_device_test_tests_round_trip"
+    },
+    {
+      "name": "virtualizationservice_device_test"
     }
   ]
 }
