@@ -41,6 +41,9 @@
       "name": "anyhow_device_test_tests_test_source"
     },
     {
+      "name": "apkdmverity.test"
+    },
+    {
       "name": "authfs_device_test_src_lib"
     },
     {
@@ -104,6 +107,12 @@
       "name": "keystore2_test"
     },
     {
+      "name": "keystore2_test_utils_test"
+    },
+    {
+      "name": "keystore2_vintf_test"
+    },
+    {
       "name": "legacykeystore_test"
     },
     {
@@ -117,9 +126,6 @@
     },
     {
       "name": "serde-xml-rs_device_test_src_lib"
-    },
-    {
-      "name": "serde-xml-rs_device_test_tests_round_trip"
     },
     {
       "name": "virtualizationservice_device_test"
